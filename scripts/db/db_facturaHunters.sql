@@ -24,3 +24,10 @@ ALTER TABLE tb_bill ADD fk_id_product INT(25) NOT NULL COMMENT 'relacion de la t
 ALTER TABLE tb_bill ADD CONSTRAINT tb_bill_tb_client_fk FOREIGN KEY(fk_identificacion) REFERENCES tb_client(identificacion);
 ALTER TABLE tb_bill ADD CONSTRAINT tb_bill_tb_product_fk FOREIGN KEY(fk_id_product) REFERENCES tb_product(id_product);
 ALTER TABLE tb_bill ADD CONSTRAINT tb_bill_tb_seller_fk FOREIGN KEY(fk_id_seller) REFERENCES tb_seller(id_seller);
+
+INSERT INTO tb_client(identificacion, full_name, email, address, phone) VALUES ('123456789', 'Dayismar Rodriguez', 'dr@gmail.com', 'Calle 11', '+5756564544');
+SELECT * FROM tb_client;
+INSERT INTO tb_bill (fk_identificacion, fk_id_product, fk_id_seller) VALUES (123, 1, 1);
+
+USE db_hunter_facture;
+INSERT INTO tb_client(identificacion, full_name, email, address, phone) VALUES (5084235, 'Dayismar Rodriguez', 'rdayismar@gmail.com', 'Almenares de san juan, Giron', '3118463744');
